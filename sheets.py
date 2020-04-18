@@ -9,13 +9,8 @@ from google.auth.transport.requests import Request
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms'
-#SAMPLE_SPREADSHEET_ID = '1RsR8JOt8fcKIAbuv6ParmYTfSsUHwk3mEhVt0encK6g'
-SAMPLE_RANGE_NAME = 'Class Data!A2:E'
-
-#https://sheets.googleapis.com/v4/spreadsheets/1RsR8JOt8fcKIAbuv6ParmYTfSsUHwk3mEhVt0encK6g/values/Class Data!A2:E
-
-#https://sheets.googleapis.com/v4/spreadsheets/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/values/Class Data!A2:E
+SAMPLE_SPREADSHEET_ID = '1RsR8JOt8fcKIAbuv6ParmYTfSsUHwk3mEhVt0encK6g'
+SAMPLE_RANGE_NAME = 'Form Responses 1!A2:H'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -53,8 +48,7 @@ def main():
     else:
         print('Column 1, Column 2, ..., Column n')
         for row in values:
-            # Print columns A and E, which correspond to indices 0 and 4.
-            print('%s, %s' % (row[0], row[8]))
+            print('%s' % (row))
 
 if __name__ == '__main__':
     main()
