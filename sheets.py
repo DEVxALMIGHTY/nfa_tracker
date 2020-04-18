@@ -47,7 +47,7 @@ def main():
         print('No data found.')
     else:
         for row in values:
-            print('%s' % (row))
+            print (','.join(map(str, row)))
 
 if __name__ == '__main__':
     main()
