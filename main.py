@@ -1,6 +1,7 @@
 import discord
-import json
 from discord.ext import commands
+
+import json
 
 with open('botsettings.json') as settings_file:
     settings = json.load(settings_file)
@@ -17,8 +18,7 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 
-#@bot.command(pass_context=True)
-@bot.command(pass_context=True)
+@bot.command()
 async def metrics(ctx):
     await ctx.send("Show metrics ...")
    
