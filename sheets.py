@@ -9,8 +9,8 @@ from google.auth.transport.requests import Request
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1RsR8JOt8fcKIAbuv6ParmYTfSsUHwk3mEhVt0encK6g'
-SAMPLE_RANGE_NAME = 'Form Responses 1!A2:H'
+SPREADSHEET_ID = '1RsR8JOt8fcKIAbuv6ParmYTfSsUHwk3mEhVt0encK6g'
+SPREADSHEET_RANGE_NAME = 'Form Responses 1!A2:H'
 
 def main():
     """Shows basic usage of the Sheets API.
@@ -39,14 +39,13 @@ def main():
 
     # Call the Sheets API
     sheet = service.spreadsheets()
-    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-                                range=SAMPLE_RANGE_NAME).execute()
+    result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
+                                range=SPREADSHEET_RANGE_NAME).execute()
     values = result.get('values', [])
 
     if not values:
         print('No data found.')
     else:
-        print('Column 1, Column 2, ..., Column n')
         for row in values:
             print('%s' % (row))
 
