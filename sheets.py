@@ -5,14 +5,14 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-# If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-
-# The ID and range of a sample spreadsheet.
-SPREADSHEET_ID = '1RsR8JOt8fcKIAbuv6ParmYTfSsUHwk3mEhVt0encK6g'
-SPREADSHEET_RANGE_NAME = 'Form Responses 1!A2:H'
-
 def main():
+    # If modifying these scopes, delete the file token.pickle.
+    SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+
+    # The ID and range of a sample spreadsheet.
+    SPREADSHEET_ID = '1RsR8JOt8fcKIAbuv6ParmYTfSsUHwk3mEhVt0encK6g'
+    SPREADSHEET_RANGE_NAME = 'Form Responses 1!A2:H'
+    
     """Shows basic usage of the Sheets API.
     Prints values from a sample spreadsheet.
     """
